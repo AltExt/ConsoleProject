@@ -5,8 +5,13 @@ internal class Program
 	static void Main()
 	{
 		//AcmeAccounting();
+		//Console.Read();
 
 		//DailyReportAssignment();
+		//Console.Read();
+
+		//MathAssignment();
+		//Console.Read();
 	}
 
 	static void AcmeAccounting()
@@ -55,5 +60,57 @@ internal class Program
 		*/
 
 		Console.Read();
+	}
+
+	static void MathAssignment()
+	{
+		int min = 0;
+		int max = Int32.MaxValue - 100;
+
+		// gets a number from user, adds 50 and writes to console
+		Console.WriteLine("Enter a number: ");
+		int inputInt = Convert.ToInt32(GetInput(min, max));
+		inputInt += 50;
+		Console.WriteLine(inputInt.ToString());
+
+		// gets a number from user, adds 25 and writes to console
+		Console.WriteLine("Enter a number: ");
+		inputInt = Convert.ToInt32(GetInput(min, max));
+		inputInt += 25;
+		Console.WriteLine(inputInt.ToString());
+
+		// gets a number from user, multiplies by 12.5 and writes to console
+		Console.WriteLine("Enter a number: ");
+		decimal inputDecimal = GetInput(min, max);
+		inputDecimal *= 12.5m;
+		Console.WriteLine(inputDecimal.ToString());
+
+		// gets a number from user, prints true if number > 50, false otherwise
+		Console.WriteLine("Enter a number: ");
+		inputInt = Convert.ToInt32(GetInput(min, max));
+		bool output = inputInt > 50;
+		Console.WriteLine(output.ToString());
+
+		// gets a number from user, prints the result of input % 7 to screen
+		Console.WriteLine("Enter a number: ");
+		inputInt = Convert.ToInt32(GetInput(min, max));
+		int remainder = inputInt % 7;
+		Console.WriteLine(remainder.ToString());
+	}
+
+	static decimal GetInput(int min, int max)
+	{
+		while ( true )
+		{
+			decimal temp = Convert.ToDecimal(Console.ReadLine());
+			if (temp > min && temp < max)
+			{
+				return temp;
+			}
+			else
+			{
+				Console.WriteLine("Please enter a number between " + min + " and " + max);
+			}
+		}
 	}
 }
