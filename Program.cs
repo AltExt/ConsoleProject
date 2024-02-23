@@ -42,6 +42,9 @@ internal class Program
 		Console.WriteLine("How many hours did you study today?");
 		uint hoursStudied = Convert.ToUInt32(Console.ReadLine());
 
+		Console.WriteLine("Thank you for your answers. An instructor will respond shortly. Have a great day!");
+
+		/*
 		Console.WriteLine("Name:\t\t\t" + studentName);
 		Console.WriteLine("Course:\t\t\t" + courseName);
 		Console.WriteLine("Page:\t\t\t" + pageNumber);
@@ -49,6 +52,7 @@ internal class Program
 		Console.WriteLine("Positive Experiences:\t" + studentPositiveExperiences);
 		Console.WriteLine("Other Feedback:\t\t" + studentOtherFeedback);
 		Console.WriteLine("Hours Studied:\t\t" + hoursStudied);
+		*/
 
 		Console.Read();
 	}
